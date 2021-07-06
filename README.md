@@ -4,7 +4,7 @@
 
 > Milestone six
 
-On this project we created Stay In Touch web app
+This Stay In Touch app enables you to share posts with your friends, and you can request friend connection from other users.
 
 There you can see images of live version.
 
@@ -33,8 +33,9 @@ There you can see images of live version.
 - Click on the `Code` green button
 - By the right end of the read-only input containing the repository link click the clipboard icon to copy the link
 - In your local PC, open your terminal in the folder you would like to clone the repository into
-- Clone the repository with the command: `git clone (copied link)`; like so: `git clone https://github.com/AbdumurodovaZulfizar/PrivateEvents`
-- After the clone, type in the command `cd PrivateEvents` to access the directory on the terminal
+- Clone the repository with the command: `git clone (copied link)`; like so: `git clone https://github.com/AbdumurodovaZulfizar/ror-social-scaffold`
+- After the clone, type in the command `cd ror-socail-scaffold` to access the directory on the terminal
+- Then run `bundle update` to update gem file
 - And type `bundle install` to load all gems in this folder.
 - After run `rails db:migrate` for migration.
 - Type `rails s` on the terminal, and type `localhost:3000` on your browser.
@@ -53,7 +54,6 @@ There you can see images of live version.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/AbdumurodovaZulfizar/PrivateEvents/issues/1).
 
 ## Show your support
 
