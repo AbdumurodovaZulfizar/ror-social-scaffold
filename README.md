@@ -82,4 +82,4 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 Copyright 2021 Zulfizar Abdumurodova
-- [MIT](https://github.com/AbdumurodovaZulfizar/PrivateEvents/blob/create_app/LICENSE) for this project.
+- [MIT](https://github.com/AbdumurodovaZulfizar/ror-social-scaffold/blob/milestone_six/LICENSE) for this project.
