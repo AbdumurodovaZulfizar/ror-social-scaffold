@@ -38,11 +38,17 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'devise'
+gem 'rexml', '~> 3.2', '>= 3.2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  # gem 'sqlite3', '~> 1.3', '>= 1.3.11'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'webdrivers'
 end
 
 group :test do
