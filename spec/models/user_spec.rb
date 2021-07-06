@@ -5,9 +5,10 @@ RSpec.describe User, type: :model do
   subject(:user) { build(:user) }
 
   describe 'associations' do
-    it { is_expected.to have_many(:events) }
+    it { is_expected.to have_many(:posts) }
 
-    it { is_expected.to have_many(:attended_events).through(:enrollments).source(:event) }
+    it { is_expected.to have_many(:comments) }
+    it { is_expected.to have_many(:likes) }
   end
 
   describe 'validations' do
