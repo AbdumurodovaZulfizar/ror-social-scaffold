@@ -1,4 +1,3 @@
-# rubocop:disable Layout/EndOfLine
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
@@ -21,5 +20,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 end
 require 'capybara/rspec'
-
-# rubocop:enable Layout/EndOfLine

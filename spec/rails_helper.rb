@@ -1,3 +1,4 @@
+# rubocop:disable Layout/EndOfLine
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 require 'capybara/rspec'
@@ -72,3 +73,4 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+# rubocop:enable Layout/EndOfLine
