@@ -55,6 +55,14 @@ As a user:
 - Type `rails s` on the terminal, and type `localhost:3000` on your browser.
 - And then you can Sign In.
 
+## Prerequisites
+- Ruby: 2.7.0
+- Rails: 5.2.3 
+- Postgres: >=9.5
+
+## To run test
+- cd into ror-social-scaffold
+- type `bundle exec rspec`
 
 ## Authors
 
