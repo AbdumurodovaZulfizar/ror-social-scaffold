@@ -20,4 +20,4 @@ class User < ApplicationRecord
     Post.where(user: (self.friends.to_a << self))
   end
 end
-# rubocop:disable Style/RedundantSelf
+# rubocop:enable Style/RedundantSelf
