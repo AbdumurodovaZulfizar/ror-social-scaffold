@@ -1,3 +1,4 @@
+# rubocop:disable Style/RedundantSelf
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -19,3 +20,4 @@ class User < ApplicationRecord
     Post.where(user: (self.friends.to_a << self))
   end
 end
+# rubocop:disable Style/RedundantSelf
