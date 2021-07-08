@@ -1,4 +1,4 @@
-<div class="bg-dark text-white">
+<div class="bg-dark text-white fixed-top">
 <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
       <%= link_to 'Mini-Insta', root_path, class:'nav-link fs-3 text-white fw-bold'%>
@@ -21,6 +21,9 @@
       <% else %>
         <%= link_to user_session_path do %>
         <button type="button" class="btn btn-outline-light">Login</button>
+        <% end %>
+        <%= link_to new_user_registration_path do %>
+        <button type="button" class="btn btn-outline-light">Sign Up</button>
         <% end %>
       <% end %>
   </div>     
