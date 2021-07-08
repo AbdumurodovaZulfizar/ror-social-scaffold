@@ -1,83 +1,81 @@
-# Scaffold for social media app with Ruby on Rails
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+# Social Media Website
+
+> Milestone six
+
+This Stay In Touch app enables you to share posts with your friends, and you can request friend connection from other users.
+
+## Business requirements:
+
+As a guest:
+- I want to be able to create account/log in.
+- I can see only “Sign in” and “Sign out” page.
+
+As a user:
+- I want to be able to see all users list.
+- I want to be able to see selected user page with their user name and all posts written by them (the most recent posts on the top).
+- I want to be able to send a friendship invitation.
+- I want to see a button “Invite to friendship” next to the name of user who is not my friend yet - on both users’ list and single user page.
+- I want to be able to see pending friendship invitations sent to me from other users.
+- I want to be able to accept or reject friendships invitation.
+- I want to be able to create new posts (text only).
+- I want to be able to like/dislike posts (but I can like single post only once).
+- I want to be able to add comments to posts.
+- I want to be able to see “Timeline” page with posts (with number of likes and comments) written by me and all my friends (the most recent posts on the top).
+- Timeline page should be the root page of the app.
 
 ## Built With
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
-
-## Live Demo
-
-TBA
-
+- <code><img height="20" src="https://www.ruby-lang.org/images/header-ruby-logo.png"></code> Ruby Language <br>
+-  <code><img height="20" src="https://rubyonrails.org/images/rails-logo.svg"></code> Ruby on Rails <br>
+- ![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp; Git<br>
+- ![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp; GitHub<br>
+- ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)&nbsp; VScode
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
+- Node
+- Rails
+- Yarn
+- Git
+- Node
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+#### Clone this repository on to your local PC
 
-### Setup
+- Click on the `Code` green button
+- By the right end of the read-only input containing the repository link click the clipboard icon to copy the link
+- In your local PC, open your terminal in the folder you would like to clone the repository into
+- Clone the repository with the command: `git clone (copied link)`; like so: `git clone https://github.com/AbdumurodovaZulfizar/ror-social-scaffold`
+- After the clone, type in the command `cd ror-socail-scaffold` to access the directory on the terminal
+- Then run `bundle update` to update gem file
+- And type `bundle install` to load all gems in this folder.
+- After run `rails db:migrate` for migration.
+- Type `rails s` on the terminal, and type `localhost:3000` on your browser.
+- And then you can Sign In.
 
-Instal gems with:
+## Prerequisites
+- Ruby: 2.7.0
+- Rails: 5.2.3 
+- Postgres: >=9.5
 
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+## To run test
+- cd into ror-social-scaffold
+- type `bundle exec rspec`
 
 ## Authors
 
-TBA
+👩🏻‍💼 **Zulfizar Abdumurodova**
+
+- GitHub: [Abdumurodova Zulfizar](https://github.com/AbdumurodovaZulfizar)
+- Twitter: [Abdumurodova Zulfizar](https://twitter.com/Zulfiza70357085)
+- LinkedIn: [Abdumurodova Zulfizar](https://www.linkedin.com/in/zulfizar-abdumurodova-a61527206/)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
@@ -85,9 +83,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+- [Microverse](https://www.microverse.org/) for international opportunities.
+- Special thanks to all code reviewers.
+- AppAcademy and FreeCodeCamp for their open source
 
 ## 📝 License
 
-TBA
-
+Copyright 2021 Zulfizar Abdumurodova
+- [MIT](https://github.com/AbdumurodovaZulfizar/ror-social-scaffold/blob/milestone_six/LICENSE) for this project.
