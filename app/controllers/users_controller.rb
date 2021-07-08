@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    @invitations = current_user.request_received
   end
 
   def show
