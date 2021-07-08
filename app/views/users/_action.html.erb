@@ -1,0 +1,23 @@
+<% if current_user.friend_request_pending_from?(user) %>
+  <%= form_with url: user_friendships_path(user), method: :patch do |f| %>
+    <%= f.submit 'Accept', class: 'btn btn-primary' %>
+  <% end %>
+  <%= form_with url: user_friendships_path(user), method: :delete do |f| %>
+    <%= f.submit 'Reject', class: 'btn btn-danger ml-2' %>
+  <% end %>
+<% end %>
+<% if current_user.friend_request_pending_to?(user) %>
+  <%= form_with url: user_friendships_path(user), method: :delete do |f| %>
+    <%= f.submit 'Cancel', class: 'btn btn-danger' %>
+  <% end %>
+<% end %>
+<% if current_user.no_relation?(user) && current_user != user %>
+  <%= form_with url: user_friendships_path(user) do |f| %>
+    <%= f.submit 'Follow', class: 'btn btn-primary' %>
+  <% end %>
+<% end %>
+<% if current_user.friend?(user) %>
+  <%= form_with url: user_friendships_path(user), method: :delete do |f| %>
+    <%= f.submit 'Unfollow', class: 'btn btn-info' %>
+  <% end %>
+<% end %>
