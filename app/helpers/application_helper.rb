@@ -53,7 +53,7 @@ module ApplicationHelper
   def connections
     link_to(
       'Connections', user_friendships_path(user_id: current_user.id, confirmed: false),
-      method: :get, class: 'btn-primary'
+      method: :get, class:'btn btn-outline-light'
     )
   end
 
