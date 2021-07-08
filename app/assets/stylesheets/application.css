@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.mx-2 {
+  margin: 0 10px 0 10px;
+}

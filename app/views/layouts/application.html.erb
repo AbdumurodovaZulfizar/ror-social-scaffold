@@ -22,7 +22,7 @@
         <div class="menu-item margin-right">
           <%= link_to current_user.name, user_path(current_user.id) %>
         </div>
-        <div class="menu-item margin-right">
+        <div class="menu-item margin-right mx-2">
           <%= connections %>
         </div>
         <%= link_to 'Sign_out', destroy_user_session_path, method: :delete %>
