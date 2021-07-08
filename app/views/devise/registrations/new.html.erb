@@ -1,34 +1,38 @@
-<h2 class='pt-5'>Sign up</h2>
+<div class='row d-flex justify-content-center'>
+<div class='mx-auto col-12 col-md-6'>
+<h2 class='pt-5 fw-bold'>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name", id:'name' %>
+    <%= f.label :name, class:"fs-5 fw-bold form-label" %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", id:'name', class:'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autocomplete: "email", id:'email' %>
+    <%= f.label :email, class:"fs-5 fw-bold form-label" %><br />
+    <%= f.email_field :email, autocomplete: "email", id:'email', class:'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, class:"fs-5 fw-bold form-label" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password", id:'password' %>
+    <%= f.password_field :password, autocomplete: "new-password", id:'password', class:'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", id:'password_confirmation' %>
+    <%= f.label :password_confirmation, class:"fs-5 fw-bold form-label" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", id:'password_confirmation', class:'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up", id:'signup' %>
+    <%= f.submit "Sign up", id:'signup', class:'btn btn-dark my-2' %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+</div>

@@ -1,4 +1,7 @@
 <section class="user-section">
+<figure class="image is-64x64">
+            <%= gravatar_image_tag( current_user.email, size: 32, alt: current_user.name, class:'img')%>
+          </figure>
   <h2><%= "Name: #{@user.name}" %></h2>
   <div>
     <%= send_or_recall_friend_request(@user) %>

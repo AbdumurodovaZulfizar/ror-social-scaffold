@@ -27,6 +27,15 @@ body, html {
   margin: 0;
 }
 
+.image {
+  border-radius: 50%;
+  img{
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+  }
+}
+
 main {
   background-image:
     repeating-radial-gradient(rgba(139, 76, 113, 0.1), rgba(164, 235, 218, 0.1)),
@@ -38,4 +47,8 @@ main {
   backface-visibility: initial;
   background-position: center;
   background-attachment: fixed;
+}
+
+.none {
+  text-decoration: none;
 }

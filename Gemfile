@@ -36,7 +36,7 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+gem 'gravatar_image_tag', '~> 1.2'
 gem 'devise'
 gem 'rexml', '~> 3.2', '>= 3.2.5'
 gem 'rubocop', '>= 1.0', '< 2.0'

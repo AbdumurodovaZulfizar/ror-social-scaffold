@@ -1,25 +1,27 @@
+<div class='row d-flex justify-content-center'>
+<div class='mx-auto col-12 col-md-6'>
 <h2 class='pt-5'>Sign in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", id:'email' %>
+    <%= f.label :email, class:"fs-5 fw-bold form-label" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", id:'email', class:'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password", id:'password' %>
+    <%= f.label :password, class:"fs-5 fw-bold form-label" %><br />
+    <%= f.password_field :password, autocomplete: "current-password", id:'password', class:'form-control' %>
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="field my-3">
+      <%= f.check_box :remember_me, class:"form-check-input" %>
+      <%= f.label :remember_me, class:"form-check-label" %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in", id:'login' %>
+    <%= f.submit "Log in", id:'login', class:'btn btn-dark' %>
   </div>
 <% end %>
 
