@@ -11,9 +11,9 @@ module ApplicationHelper
   def like_or_dislike_btn(post)
     like = Like.find_by(post: post, user: current_user)
     if like
-      link_to('👎', post_like_path(id: like.id, post_id: post.id), method: :delete, class:'none red')
+      link_to('👎', post_like_path(id: like.id, post_id: post.id), method: :delete, class: 'none red')
     else
-      link_to('👍', post_likes_path(post_id: post.id), method: :post, class:'none red')
+      link_to('👍', post_likes_path(post_id: post.id), method: :post, class: 'none red')
     end
   end
 
@@ -53,7 +53,7 @@ module ApplicationHelper
   def connections
     link_to(
       'Connections', user_friendships_path(user_id: current_user.id, confirmed: false),
-      method: :get, class:'btn btn-outline-light'
+      method: :get, class: 'btn btn-outline-light'
     )
   end
 
