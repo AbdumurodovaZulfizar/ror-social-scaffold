@@ -1,9 +1,28 @@
-<section class="user-section">
-  <h2><%= "Name: #{@user.name}" %></h2>
+<section class="user-section col-8">
+
+
+
+  <% if pending_array(@invitations).length > 0  && pending_array(@invitations).include?(@user)%>
+        <% pending_array(@invitations).map do |pendig_user| %>
+
+
+                    <span class="profile-link">
+                        <%= link_to pendig_user.name,  user_path(pendig_user), class: 'profile-link fs-4 fw-bold text-dark none' %>
+                       
+                    </span>
+                    <div>
+                        <%= accept_friend_request(pendig_user) %>
+                        <%= reject_friend_request(pendig_user) %>
+                    </div>
+  
+        <% end %>
+        <% else %>
+          <h2><%= " #{@user.name}" %></h2>
+          <%= send_or_recall_friend_request(@user) %>
   <article class="timeline">
-    <h3>Recent posts:</h3>
     <ul class="posts">
       <%= render @posts %>
     </ul>
   </article>
+  <% end %>
 </section>

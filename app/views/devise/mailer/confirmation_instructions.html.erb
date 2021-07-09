@@ -1,5 +1,9 @@
-<p>Welcome <%= @email %>!</p>
+<div class='row d-flex justify-content-center'>
+<div class='mx-auto col-12 col-md-6'>
+<p class='pt-5'>Welcome <%= @email %>!</p>
 
 <p>You can confirm your account email through the link below:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+</div>
+</div>

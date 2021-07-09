@@ -1,6 +1,20 @@
-<li>
-  Name: <%= user.name %>
-  <span class="profile-link">
-    <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
-  </span>
-</li>
+<% if pending_array(@invitations).length > 0  && pending_array(@invitations).include?(user)%>
+        <% pending_array(@invitations).map do |pendig_user| %>
+        <br />
+                    <span class="profile-link">
+                        <%= link_to pendig_user.name,  user_path(pendig_user), class: 'profile-link none fs-3 fw-bold text-dark' %>
+                    </span>
+                        <%= accept_friend_request(pendig_user) %>
+                        <%= reject_friend_request(pendig_user) %>
+   
+        <% end %>
+
+    <% else %>
+
+<br />
+    <%= link_to user.name,  user_path(user), class: 'profile-link none fs-3 fw-bold text-dark' %>
+
+
+    <%= send_or_recall_friend_request(user) %>
+
+    <% end %>
