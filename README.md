@@ -64,6 +64,9 @@ As a user:
 - cd into ror-social-scaffold
 - type `bundle exec rspec`
 
+## Live Demo
+[Mini Insta](https://arcane-island-34002.herokuapp.com/)
+
 ## Authors
 
 👩🏻‍💼 **Zulfizar Abdumurodova**
