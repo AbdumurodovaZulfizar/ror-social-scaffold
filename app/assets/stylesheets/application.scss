@@ -17,19 +17,22 @@
 .mx-2 {
   margin: 0 10px 0 10px;
 }
+
 .white {
   background-color: white;
   color: white;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
 
 .image {
   border-radius: 50%;
-  img{
+
+  img {
     border-radius: 50%;
     height: 64px;
     width: 64px;
@@ -37,16 +40,8 @@ body, html {
 }
 
 body {
-  background-image:
-    repeating-radial-gradient( rgba(164, 235, 218, 1),rgb(240, 100, 219));
-    // url(https://image.freepik.com/free-vector/instagram-background-gradient-colors_23-2147821882.jpg);
-  // width: 100%;
-  height:100%;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // backface-visibility: initial;
-  // background-position: center;
-  // background-attachment: fixed;
+  background-image: repeating-radial-gradient(rgba(164, 235, 218, 1), rgb(240, 100, 219));
+  height: 100%;
 }
 
 .none {
