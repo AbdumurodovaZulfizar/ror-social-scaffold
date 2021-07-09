@@ -1,10 +1,10 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Social Media Website
+# Mini Insta
 
-> Milestone six
+> This is a social app to chat with friends. On this you can send friend request to each other and share posts.
 
-This Stay In Touch app enables you to share posts with your friends, and you can request friend connection from other users.
+<img src="./app/assets/images/miniinsta.PNG" alt="Example" style="width: 100%;">
 
 ## Business requirements:
 
