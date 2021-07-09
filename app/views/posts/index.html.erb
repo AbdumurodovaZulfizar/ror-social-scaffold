@@ -1,11 +1,11 @@
+<div class='container pt-5 col-8'>
 <%= form_for(@post) do |form| %>
-  <%= form.label :content %>
-  <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
+  <%= form.text_area :content, id: :post_content, class: 'form-control height', placeholder: 'Add New Post', rows:"3" %>
   <%= display_errors(@post) %>
-  <%= form.submit 'Save', class: 'btn btn-primary' %>
+  <%= form.submit 'Save', class: 'btn btn-dark my-2 float-end' %>
 <% end %>
 
-<article class="timeline">
+<article class="timeline mt-5">
   <h3>
     Recent posts
   </h3>
@@ -13,3 +13,4 @@
     <%= render @timeline_posts %>
   </ul>
 </article>
+</div>

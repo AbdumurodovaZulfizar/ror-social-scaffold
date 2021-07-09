@@ -1,5 +1,5 @@
 <div class="bg-dark text-white fixed-top">
-<div class="container">
+  <div class="container">
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
       <%= link_to 'Mini-Insta', root_path, class:'nav-link fs-3 text-white fw-bold'%>
 
@@ -8,25 +8,24 @@
       </ul>
 
 
-<div class="col-md-3 text-end">
-      <% if current_user %>
-  
-          <%= link_to current_user.name, user_path(current_user.id), class:'btn btn-outline-light' %>
+      <div class="col-md-4 text-end">
+        <% if current_user %>
+
+        <%= link_to current_user.name, user_path(current_user.id), class:'btn btn-outline-light' %>
+
+        <%= connections %>
+
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class:"btn btn-light"  %>
     
-          <%= connections %>
- 
-        <%= link_to  destroy_user_session_path, method: :delete  do %>
-        <button type="button" class="btn btn-light">Sign Out</button>
-        <% end %>
-      <% else %>
+        <% else %>
         <%= link_to user_session_path do %>
         <button type="button" class="btn btn-outline-light">Login</button>
         <% end %>
         <%= link_to new_user_registration_path do %>
         <button type="button" class="btn btn-outline-light">Sign Up</button>
         <% end %>
-      <% end %>
-  </div>     
+        <% end %>
+      </div>
     </header>
   </div>
-  </div>
+</div>

@@ -1,33 +1,28 @@
 <div class="invitations-section">
     
     <% if pending_array(@invitations).length > 0 %>
-        <h3>Pending friend request invitations:</h3><br>
+        <h3 class="fw-bold">Requests:</h3><br>
         <% pending_array(@invitations).map do |pendig_user| %>
-            <ul class="pending-invitations">
-                <li>    
-                    Name: <%= pendig_user.name %>
+           
+        
                     <span class="profile-link">
-                        <%= link_to 'See Profile',  user_path(pendig_user), class: 'profile-link' %>
+                        <%= link_to pendig_user.name,  user_path(pendig_user), class: 'profile-link fs-4 none text-dark' %>
                     </span>
-                    <div>
+       
                         <%= accept_friend_request(pendig_user) %>
                         <%= reject_friend_request(pendig_user) %>
-                    </div>
-                </li>
-            </ul>    
+         
+      
         <% end %>
     <% end %>
     <% if connections_array(@friends).length > 0 %>
-        <h3>My friends:</h3><br>
+        <h3 class="fw-bold mt-5">Friends:</h3><br>
         <% connections_array(@friends).map do |friend| %>
-            <ul class="pending-invitations">
-                <li>    
-                    Name: <%= friend.name %>
+<br />
                     <span class="profile-link">
-                        <%= link_to 'See Profile',  user_path(friend), class: 'profile-link' %>
+                        <%= link_to friend.name,  user_path(friend), class: 'profile-link fs-4 none text-dark' %>
                     </span>
-                </li>
-            </ul>    
+     
         <% end %>
     <% end %>
 </div>

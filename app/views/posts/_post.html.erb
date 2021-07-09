@@ -1,25 +1,38 @@
-  <% if friends?(post.user) || current_user == post.user %>
-<li class="post">
-  <div>
-    <div class='post-attribution' >
-      <%= link_to post.user.name, user_path(post.user), class: 'post-author' %>
-    </div>
-    <div class='post-liking'>
-      <span class='post-date'> <%= post.created_at.strftime("%Y/%m/%d") %> </span>
-      <%= like_or_dislike_btn(post) %>
-    </div>
-  </div>
-  <p class="post-content">
-    <%= post.content %>
-  </p>
+  <div class='container pt-5'>
+    <% if friends?(post.user) || current_user == post.user %>
 
-  <div class='post-comments-section'>
-    <%= render partial: 'comments/comment', collection: post.comments %>
 
+
+
+    <div class="card">
+      <p class=""><%= link_to post.user.name, user_path(post.user), class: 'post-author none text-dark px-2 py-1' %></p>
+      <div class="card-body px-2 py-0">
+        <div class='border border-dark border-1 rounded p-2 mb-3'>
+          <%= post.content%>
+          <div class="text-end fw-light fs-6 text-small">
+            <%= like_or_dislike_btn(post) %>
+            <span class='mini'><%= post.created_at.strftime("%Y/%m/%d") %></span>
+          </div>
+        </div>
+        <%= render partial: 'comments/comment', collection: post.comments %>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div class="my-3 col-12 d-flex justify-content-between">
+<div class="float-end col-8">
     <%= form_for(post.comments.new, url: post_comments_path(post)) do |form| %>
-      <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
-      <%= form.submit 'Comment', class: 'btn btn-secondary' %>
+    <%= form.text_field :content, id: :comment_content, class: 'form-control float-end', placeholder: 'Add new Comment' %>
+     </div>
+    <%= form.submit 'Send', class: 'btn btn-outline-light float-end my-3' %>
     <% end %>
-  </div>
-</li>
-<% end %>
+
+</div>
+
+    <% end %>

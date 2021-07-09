@@ -6,12 +6,12 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.label :email, class:"fs-5 fw-bold form-label" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'form-control' %>
   </div>
 
   <div class="actions reset">
-    <%= f.submit "Send me reset password instructions" %>
+    <%= f.submit "Instructions", class:'btn btn-dark my-2' %>
   </div>
 <% end %>
 
