@@ -37,13 +37,13 @@ module ApplicationHelper
     request = Friendship.find_by(user_id: current_user.id, friend_id: user.id, confirmed: false)
     if request
       link_to(
-        'Recall friend request',
+        'Recall Request',
         user_friendship_path(id: request.id, user_id: current_user.id, friend_id: user.id),
         method: :delete, class: 'btn btn-dark p-1'
       )
     else
       link_to(
-        'Send friend request',
+        'Send Request',
         user_friendships_path(user_id: current_user.id, friend_id: user.id, confirmed: false),
         method: :post, class: 'btn btn-dark p-1'
       )
@@ -76,7 +76,7 @@ module ApplicationHelper
   def accept_friend_request(user)
     request = Friendship.find_by(user: user, friend: current_user)
     link_to(
-      'Accept a friend request', user_friendship_path(id: request.id, user_id: current_user.id, friend_id: user.id),
+      'Accept', user_friendship_path(id: request.id, user_id: current_user.id, friend_id: user.id),
       method: :patch, class: 'btn btn-dark p-1'
     )
   end
@@ -84,7 +84,7 @@ module ApplicationHelper
   def reject_friend_request(user)
     request = Friendship.find_by(user_id: user.id, friend_id: current_user.id, confirmed: false)
     link_to(
-      'Decline a friend request',
+      'Ignore',
       user_friendship_path(id: request.id, user_id: user.id, friend_id: current_user.id),
       method: :delete, class: 'btn btn-dark p-1'
     )
